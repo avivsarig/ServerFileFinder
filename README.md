@@ -11,3 +11,7 @@ Server File Finder is a small JavaScript Front-end component for checking if a f
 3. **`isValidURL.js`**: Contains a utility function to validate URLs.
 
 4. **`requestThrottling.js`**: Implements request throttling to prevent excessive requests to the server.
+
+
+## How to Run
+Use a brower or an IDE preview add-on like VSCode's live-preview to run index.html
