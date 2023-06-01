@@ -1,13 +1,12 @@
 export function throttle(func, delay) {
-    let timeoutId = null;
+    let lastCall = 0;
 
-    return function (args) {
-        const later = function () {
-            timeoutId = null;
-            func(args);
-        };
-
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(later, delay);
+    return function (...args) {
+        const now = Date.now();
+        if ((now - lastCall) < delay) {
+            return;
+        }
+        lastCall = now;
+        return func(...args);
     };
 }
