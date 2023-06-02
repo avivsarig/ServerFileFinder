@@ -1,6 +1,6 @@
 # Server File Finder
 
-Server File Finder is a small JavaScript Front-end component for checking if a file or directory exists at a given URL.
+Server File Finder is a small JavaScript Client-Side component for checking if a file or directory exists at a given URL.
 
 ## Components
 
