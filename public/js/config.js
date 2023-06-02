@@ -1,0 +1,1 @@
+export const RATE_LIMIT_SETTING = 1000;

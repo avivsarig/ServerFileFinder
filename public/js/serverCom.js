@@ -1,5 +1,5 @@
 import { throttle } from './requestThrottling.js';
-import { rateLimitSetting } from './config.js';
+import { RATE_LIMIT_SETTING } from './config.js';
 
 export async function makeRequest(url) {
     const response = await fetch(url);
@@ -8,4 +8,4 @@ export async function makeRequest(url) {
     return data;
 }
 
-export const sendRequest = throttle(makeRequest, rateLimitSetting);
+export const sendRequest = throttle(makeRequest, RATE_LIMIT_SETTING);

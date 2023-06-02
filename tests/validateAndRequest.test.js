@@ -1,5 +1,5 @@
 import { JSDOM } from 'jsdom';
-import { sendRequest } from '../js/serverCom.js';
+import { sendRequest } from '../public/js/serverCom.js';
 
 function setUpDOM() {
     const html = `
@@ -14,7 +14,7 @@ function setUpDOM() {
     global.document = window.document;
 }
 
-jest.mock('../js/serverCom.js', () => ({
+jest.mock('../public/js/serverCom.js', () => ({
     sendRequest: jest.fn(),
 }));
 
@@ -23,7 +23,7 @@ describe('validateAndSendRequest', () => {
 
     beforeEach(() => {
         setUpDOM();
-        validateAndSendRequest = require('../js/main.js').validateAndSendRequest;
+        validateAndSendRequest = require('../public/js/main.js').validateAndSendRequest;
     });
 
     test('no input', async () => {

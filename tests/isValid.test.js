@@ -1,4 +1,4 @@
-import { isValidURL } from '../js/validation.js';
+import { isValidURL } from '../public/js/validation';
 
 test('validURL', () => {
     expect(isValidURL('https://www.google.com')).toBe(true);

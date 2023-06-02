@@ -1,1 +1,0 @@
-export const rateLimitSetting = 1000;

@@ -1,4 +1,4 @@
-import { throttle } from '../js/requestThrottling.js';
+import { throttle } from '../public/js/requestThrottling.js';
 
 describe('throttle', () => {
     let func;

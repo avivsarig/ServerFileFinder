@@ -9,7 +9,7 @@ export async function validateAndSendRequest(input) {
     }
 
     else {
-        validatorResponse.textContent = '...';
+        validatorResponse.textContent = 'Waiting for response';
         const response = await sendRequest(input);
 
         if (response.exists) {

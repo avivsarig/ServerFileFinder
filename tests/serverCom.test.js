@@ -1,5 +1,5 @@
 import { JSDOM } from 'jsdom';
-import { sendRequest, makeRequest } from '../js/serverCom.js'
+import { sendRequest, makeRequest } from '../public/js/serverCom.js'
 
 function setUpDOM() {
     const html = `
@@ -21,7 +21,7 @@ global.fetch = jest.fn(() =>
 );
 
 // Mock throttle
-jest.mock('../js/requestThrottling.js', () => ({
+jest.mock('../public/js/requestThrottling.js', () => ({
     throttle: jest.fn((fn, limit) => fn),
 }));
 
