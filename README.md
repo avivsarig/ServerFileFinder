@@ -42,29 +42,30 @@ Server File Finder is a small JavaScript Client-Side component for checking if a
 
 /
 ├── animals/
-│ ├── dogs/
-│ │ ├── sausage_dog.jpg
-│ │ ├── supermodel_pup.jpg
-│ │ └── ninja_chihuahua.jpg
-│ └── cats/
-│ ├── fancy_feline.jpg
-│ ├── sassy_siamese.jpg
-│ └── lazy_lion.jpg
+│   ├── dogs/
+│   │   ├── sausage_dog.jpg
+│   │   ├── supermodel_pup.jpg
+│   │   └── ninja_chihuahua.jpg
+│   └── cats/
+│       ├── fancy_feline.jpg
+│       ├── sassy_siamese.jpg
+│       └── lazy_lion.jpg
 ├── food/
-│ ├── fruits/
-│ │ ├── magical_mango.txt
-│ │ ├── banana_bandit.txt
-│ │ └── orange_overlord.txt
-│ └── vegetables/
-│ ├── carrot_conqueror.txt
-│ ├── tomato_terminator.txt
-│ └── potato_paladin.txt
+│   ├── fruits/
+│   │   ├── magical_mango.txt
+│   │   ├── banana_bandit.txt
+│   │   └── orange_overlord.txt
+│   └── vegetables/
+│       ├── carrot_conqueror.txt
+│       ├── tomato_terminator.txt
+│       └── potato_paladin.txt
 └── music/
-├── rock/
-│ ├── air_guitar_anthem.mp3
-│ ├── headbanging_hero.mp3
-│ └── queen_of_riffs.mp3
-└── pop/
-├── dancing_diva.mp3
-├── melody_maverick.mp3
-└── bieber_fever.mp3
+    ├── rock/
+    │   ├── air_guitar_anthem.mp3
+    │   ├── headbanging_hero.mp3
+    │   └── queen_of_riffs.mp3
+    └── pop/
+        ├── dancing_diva.mp3
+        ├── melody_maverick.mp3
+        └── bieber_fever.mp3
+
