@@ -4,7 +4,6 @@ test('validURL', () => {
     expect(isValidURL('https://www.google.com')).toBe(true);
 });
 
-// Test for an invalid URL
 test('Invalid URL', () => {
     expect(isValidURL('invalid_url')).toBe(false);
 });
