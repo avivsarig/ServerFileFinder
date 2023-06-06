@@ -39,7 +39,7 @@ describe('validateAndSendRequest', () => {
     });
 
     test('Valid URL - File Found', async () => {
-        const input = 'https://example.com/file.txt';
+        const input = 'http://mock-server/animals/dogs/ninja_chihuahua.jpg';
         sendRequest.mockResolvedValue({ exists: true, isFile: true });
 
         await validateAndSendRequest(input);
@@ -47,7 +47,7 @@ describe('validateAndSendRequest', () => {
     });
 
     test('Valid URL - Folder Found', async () => {
-        const input = 'https://example.com/folder/';
+        const input = 'http://mock-server/music/rock/';
         sendRequest.mockResolvedValue({ exists: true, isFile: false });
 
         await validateAndSendRequest(input);
@@ -55,7 +55,7 @@ describe('validateAndSendRequest', () => {
     });
 
     test('Valid URL - Not Found', async () => {
-        const input = 'https://example.com/notfound';
+        const input = 'http://mock-server/vehicles/cars/delorean.jpg';
         sendRequest.mockResolvedValue({ exists: false });
 
         await validateAndSendRequest(input);

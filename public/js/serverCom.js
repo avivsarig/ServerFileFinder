@@ -32,7 +32,7 @@ const fileTree = [
     "/music/pop/bieber_fever.mp3"
 ];
 
-function makeRequest(url) {
+export function makeRequest(url) {
     return new Promise((resolve) => {
         setTimeout(() => {
             const route = 'http://mock-server';

@@ -13,13 +13,6 @@ function setUpDOM() {
     global.document = window.document;
 }
 
-// Mock Fetch
-global.fetch = jest.fn(() =>
-    Promise.resolve({
-        json: () => Promise.resolve({ data: "mock data" }),
-    })
-);
-
 // Mock throttle
 jest.mock('../public/js/requestThrottling.js', () => ({
     throttle: jest.fn((fn, limit) => fn),
@@ -28,30 +21,25 @@ jest.mock('../public/js/requestThrottling.js', () => ({
 describe('serverCom', () => {
     beforeEach(() => {
         setUpDOM();
-        fetch.mockClear();
     });
 
-    test('calls makeRequest and returns data', async () => {
-        const data = await makeRequest('http://example.com');
-        expect(fetch).toHaveBeenCalledTimes(1);
-        expect(data).toEqual({ data: "mock data" });
+    test('calls makeRequest with valid URL and returns data', async () => {
+        const data = await makeRequest('http://mock-server/animals/dogs/');
+        expect(data).toEqual({ exists: true, isFile: false });
     });
 
-    test('calls sendRequest and returns data', async () => {
-        const data = await sendRequest('http://example.com');
-        expect(fetch).toHaveBeenCalledTimes(1);
-        expect(data).toEqual({ data: "mock data" });
+    test('calls makeRequest with invalid URL and returns not found', async () => {
+        const data = await makeRequest('http://invalid-url');
+        expect(data).toEqual({ exists: false });
     });
 
-    test('returns an error when fetch fails', async () => {
-        fetch.mockImplementationOnce(() => Promise.reject('API failure'));
+    test('calls sendRequest with valid URL and returns data', async () => {
+        const data = await sendRequest('http://mock-server/animals/dogs/');
+        expect(data).toEqual({ exists: true, isFile: false });
+    });
 
-        try {
-            await makeRequest('http://example.com');
-        } catch (error) {
-            expect(error).toBe('API failure');
-        }
-
-        expect(fetch).toHaveBeenCalledTimes(1);
+    test('calls sendRequest with invalid URL and returns not found', async () => {
+        const data = await sendRequest('http://invalid-url');
+        expect(data).toEqual({ exists: false });
     });
 });
