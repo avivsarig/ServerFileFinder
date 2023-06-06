@@ -33,21 +33,25 @@ const fileTree = [
 ];
 
 function makeRequest(url) {
-    const route = 'http://mock-server'
-    if (!url.startsWith(route)) {
-        const response = { exists: false };
-        return response;
-    }
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const route = 'http://mock-server';
+            if (!url.startsWith(route)) {
+                const response = { exists: false };
+                resolve(response);
+            }
 
-    const query = url.split(route)[1];
-    if (!fileTree.includes(query)) {
-        const response = { exists: false };
-        return response;
-    } else {
-        const isFile = !query.endsWith('/')
-        const response = { exists: true, isFile: isFile };
-        return response;
-    }
+            const query = url.split(route)[1];
+            if (!fileTree.includes(query)) {
+                const response = { exists: false };
+                resolve(response);
+            } else {
+                const isFile = !query.endsWith('/');
+                const response = { exists: true, isFile: isFile };
+                resolve(response);
+            }
+        }, 500);
+    });
 }
 
 export const sendRequest = throttle(makeRequest, RATE_LIMIT_SETTING);

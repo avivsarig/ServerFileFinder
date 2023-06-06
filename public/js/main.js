@@ -10,7 +10,7 @@ export async function validateAndSendRequest(input) {
 
     else {
         validatorResponse.textContent = 'Waiting for response';
-        const response = sendRequest(input);
+        const response = await sendRequest(input);
 
         if (response?.exists) {
             validatorResponse.textContent = response.isFile ? 'File Found' : 'Folder Found';
