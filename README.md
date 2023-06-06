@@ -40,32 +40,44 @@ Server File Finder is a small JavaScript Client-Side component for checking if a
 
 3. **`serverCom.js`** is checking whether the path leads to one of the files or folders in the tree below:
 
-/
-├── animals/
-│   ├── dogs/
-│   │   ├── sausage_dog.jpg
-│   │   ├── supermodel_pup.jpg
-│   │   └── ninja_chihuahua.jpg
-│   └── cats/
-│       ├── fancy_feline.jpg
-│       ├── sassy_siamese.jpg
-│       └── lazy_lion.jpg
-├── food/
-│   ├── fruits/
-│   │   ├── magical_mango.txt
-│   │   ├── banana_bandit.txt
-│   │   └── orange_overlord.txt
-│   └── vegetables/
-│       ├── carrot_conqueror.txt
-│       ├── tomato_terminator.txt
-│       └── potato_paladin.txt
-└── music/
-    ├── rock/
-    │   ├── air_guitar_anthem.mp3
-    │   ├── headbanging_hero.mp3
-    │   └── queen_of_riffs.mp3
-    └── pop/
-        ├── dancing_diva.mp3
-        ├── melody_maverick.mp3
-        └── bieber_fever.mp3
-
+/ <br>
+│<br>
+├── animals/ <br>
+│&emsp;│<br>
+│&emsp;├── dogs/ <br>
+│&emsp;│&emsp;│<br>
+│&emsp;│&emsp;├── sausage_dog.jpg<br>
+│&emsp;│&emsp;├── supermodel_pup.jpg<br>
+│&emsp;│&emsp;└── ninja_chihuahua.jpg<br>
+│&emsp;│<br>
+│&emsp;└── cats/ <br>
+│&emsp;&emsp;│<br>
+│&emsp;&emsp;├── fancy_feline.jpg<br>
+│&emsp;&emsp;├── sassy_siamese.jpg<br>
+│&emsp;&emsp;└── lazy_lion.jpg<br>
+├── food/ <br>
+│&emsp;│<br>
+│&emsp;├── fruits/ <br>
+│&emsp;│&emsp;│<br>
+│&emsp;│&emsp;├── magical_mango.txt<br>
+│&emsp;│&emsp;├── banana_bandit.txt<br>
+│&emsp;│&emsp;└── orange_overlord.txt<br>
+│&emsp;│<br>
+│&emsp;└── vegetables/ <br>
+│&emsp;&emsp;│<br>
+│&emsp;&emsp;├── carrot_conqueror.txt<br>
+│&emsp;&emsp;├── tomato_terminator.txt<br>
+│&emsp;&emsp;└── potato_paladin.txt<br>
+└── music/ <br>
+&emsp;│<br>
+&emsp;├── rock/ <br>
+&emsp;│&emsp;│<br>
+&emsp;│&emsp;├── air_guitar_anthem.mp3<br>
+&emsp;│&emsp;├── headbanging_hero.mp3<br>
+&emsp;│&emsp;└── queen_of_riffs.mp3<br>
+&emsp;│<br>
+&emsp;└── pop/ <br>
+&emsp;&emsp;│<br>
+&emsp;&emsp;├── dancing_diva.mp3<br>
+&emsp;&emsp;├── melody_maverick.mp3<br>
+&emsp;&emsp;└── bieber_fever.mp3<br>
