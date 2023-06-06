@@ -26,6 +26,8 @@ Server File Finder is a small JavaScript Client-Side component for checking if a
 
 1. Use command-line interface to run `npm run start`
 
+2. Type input starting with 'http://mock-server/' - full folder/file tree is available in 'Under the hood' section
+
 ## How to run the tests
 
 1. Use command-line interface to run `npm run test`
@@ -35,3 +37,34 @@ Server File Finder is a small JavaScript Client-Side component for checking if a
 1. **`isValidURL.js`** is checking whether the input string can be parsed into a valid URL class using `new URL(input);`. This function is limited to URL's starting with `*:`
 
 2. **`requestThrottling.js`** limits the execution of the passed func to no more than once every delay milliseconds. It returns a new function that, when invoked, either returns undefined if called too soon or the result of func otherwise.
+
+3. **`serverCom.js`** is checking whether the path leads to one of the files or folders in the tree below:
+
+/
+├── animals/
+│ ├── dogs/
+│ │ ├── sausage_dog.jpg
+│ │ ├── supermodel_pup.jpg
+│ │ └── ninja_chihuahua.jpg
+│ └── cats/
+│ ├── fancy_feline.jpg
+│ ├── sassy_siamese.jpg
+│ └── lazy_lion.jpg
+├── food/
+│ ├── fruits/
+│ │ ├── magical_mango.txt
+│ │ ├── banana_bandit.txt
+│ │ └── orange_overlord.txt
+│ └── vegetables/
+│ ├── carrot_conqueror.txt
+│ ├── tomato_terminator.txt
+│ └── potato_paladin.txt
+└── music/
+├── rock/
+│ ├── air_guitar_anthem.mp3
+│ ├── headbanging_hero.mp3
+│ └── queen_of_riffs.mp3
+└── pop/
+├── dancing_diva.mp3
+├── melody_maverick.mp3
+└── bieber_fever.mp3
