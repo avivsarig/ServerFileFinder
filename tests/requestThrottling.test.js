@@ -25,7 +25,10 @@ describe('throttle', () => {
         throttledFunc();
         throttledFunc();
         throttledFunc();
-        expect(func).toHaveBeenCalledTimes(1);
+        throttledFunc();
+        throttledFunc();
+        throttledFunc();
+        expect(func).toHaveBeenCalledTimes(2);
     })
 
     test('call after two throttled call', () => {
@@ -33,6 +36,6 @@ describe('throttle', () => {
         throttledFunc();
         jest.advanceTimersByTime(1000);
         throttledFunc();
-        expect(func).toHaveBeenCalledTimes(2);
+        expect(func).toHaveBeenCalledTimes(3);
     })
 });
