@@ -24,6 +24,11 @@ describe('validateAndSendRequest', () => {
     beforeEach(() => {
         setUpDOM();
         validateAndSendRequest = require('../public/js/main.js').validateAndSendRequest;
+        jest.useFakeTimers();
+    });
+
+    afterEach(() => {
+        jest.useRealTimers();
     });
 
     test('no input', async () => {
